@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color : #151B26;
+    font-weight: 400;
+}
+
+.sr-only {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+.text-gray {
+    color: #7D858F;
+}
+
+.card {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+    padding: 12px;
+    margin-right: 24px;
+    border-radius: 6px;
+    background-image: url(./assets/img-house.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.like-button {
+    width: 36px;
+    height: 36px;
+    background-image: url(./assets/icon-favorite.svg);
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+    background-position: center center;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.property-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.property-type strong {
+    text-align: center;
+    line-height: 22px;
+    width: 48px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #92174D;
+    color: #FFFFFF;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.property-rate{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.card-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.property-detail:first-child div{
+    margin-bottom: 8px;
+}
+
+.property-detail dd span::after{
+    content: "・";
+    margin: 0 2px 0 6px;
+}
+
+.property-detail dd span:last-child::after{
+    content: "";
+    margin: 0;
+}
+
+.property-rate::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/icon-star.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right: 4px;
+}
+
+.property-rate strong {
+    margin-right: 1px;
+}

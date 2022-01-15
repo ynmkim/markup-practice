@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.015em; 
+    line-height: 1.4666666667;
+    color: #545454;
+    background-color: #ddd;
+}
+
+/* Reset */
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+button,
+label,
+input {
+  cursor: pointer;
+}
+
+button,
+input,
+textarea {
+    border: none;
+    font-family: "Inter", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+    box-shadow: none;
+    outline: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* All style */
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 1160px;
+    background-color: #FFFFFF;
+}
+
+.product-image-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 540px;
+    margin-bottom: 20px;
+}
+
+.product-image-viewer .main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 520px;
+    margin-bottom: 16px;
+}
+
+.product-image-viewer .main-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-image-viewer .view-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-image-viewer .view-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    width: 60px;
+    height: 60px;
+    transition: opacity 300ms ease-in-out;
+}
+
+.product-image-viewer .view-item:last-child {
+    margin-right: 0;
+}
+
+.product-image-viewer .view-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-image-viewer .view-item button {
+    background-color: transparent;
+}
+
+.product-image-viewer .view-item.selected {
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+}
+
+.product-image-viewer .view-item:hover {
+    opacity: 0.5;
+}
+
+.product-content {
+    width: 500px;
+    padding-top: 40px;
+}
+
+.product-header {
+    margin-bottom: 20px;
+}
+
+.product-title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3333333333;
+    letter-spacing: -0.03em;
+    color: #1C1C1C;
+}
+
+.product-misc {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: -0.02em;
+}
+
+.product-misc div dt {
+    margin-right: 4px;
+}
+
+.product-misc .rate{
+    display: flex;
+    align-items: center;
+    margin-right: 17px;
+    color: #969696;
+}
+
+.product-misc .rate dt {
+    display: flex;
+    align-items: center;
+}
+
+.product-misc .orders {
+    display: flex;
+    align-items: center;
+}
+
+.product-misc div dt span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.icon-star-active {
+    background-image: url('./assets/icon-star-active.svg');  
+}
+
+.icon-star-inactive {
+    background-image: url('./assets/icon-star-muted.svg');
+}
+
+.icon-cart {
+    background-image: url('./assets/icon-cart.svg');
+}
+
+.product-misc .orders {
+    color: #00B517;
+}
+
+.product-price {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3333333333;
+    letter-spacing: -0.03em;
+    color: #1C1C1C;
+}
+
+.product-desc {
+    margin-bottom: 20px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.product-detail div{
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    width: 100%;
+    height: 38px;
+    background-color: #F7F7F7;
+}
+
+.product-detail div:nth-child(1) {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.product-detail div:nth-child(2) {
+    background-color: #FFFFFF;
+}
+
+.product-detail div:nth-child(3) {
+    border-radius: 0px 0px 6px 6px;
+}
+
+.product-detail > div dt {
+    width: 86px;
+}
+
+.product-detail div dd {
+    font-weight: 600;
+    color: #1C1C1C;
+}
+
+.form-options {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.form-options label {
+    display: block;
+}
+
+.form-quantity > label {
+    margin-bottom: 8px;
+}
+  
+.form-size > label {
+    margin-bottom: 16px;
+}
+
+.form-group.form-quantity {
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+}
+
+.radio-buttons {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-button {
+    display: flex;
+    margin-right: 20px;
+}
+
+.radio-button label {
+    order: 2;   
+}
+
+.radio-button input {
+    margin-right: 10px;
+    order: 1;
+}
+
+/* radio button style */
+
+input[type='radio'],
+input[type='radio']:checked {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+} 
+input[type='radio']:checked {
+    border: 6px solid #007BFF;
+}
+
+.form-submit {
+    border-radius: 6px;
+    width: 501px;
+    height: 64px;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3333333333;
+    letter-spacing: -0.02em;
+    transition: opacity 300ms ease-in-out;
+}
+
+.form-submit:hover {
+    opacity: 0.5;
+}
+
+.combo-box {
+    display: flex;
+    align-items: center;
+}
+
+.combo-box button {
+    border: 1px solid #E4E4E4;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px auto;
+    transition: opacity 250ms ease-in-out;
+}
+
+.combo-box button:hover {
+    background-color: #F8F8F8;
+}
+
+.combo-box input {
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+
+.combo-box button,
+.combo-box input{
+    width: 38px;
+    height: 38px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.combo-box #minus-button {
+    background-image: url('./assets/icon-minus.svg');
+    border-radius: 6px 0 0 6px;
+}
+
+.combo-box #plus-button {
+    background-image: url('./assets/icon-plus.svg');
+    border-radius: 0 6px 6px 0;
+}
